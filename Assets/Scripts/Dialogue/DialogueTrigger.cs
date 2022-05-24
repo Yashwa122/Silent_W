@@ -36,7 +36,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D Player)
     {
-        if (Player.gameObject.tag == "Fighter")
+        if (Player.gameObject.tag == "Player")
         {
             playerInRange = true;
         }
@@ -44,7 +44,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D Player)
     {
-        if (Player.gameObject.tag == "Fighter")
+        if (Player.gameObject.tag == "Player")
         {
             playerInRange = false;
         }

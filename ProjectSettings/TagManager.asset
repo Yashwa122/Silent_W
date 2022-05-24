@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Fighter
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -45,7 +44,7 @@ TagManager:
   - name: Floor
     uniqueID: 978045021
     locked: 0
-  - name: Actor
+  - name: Player
     uniqueID: 46742663
     locked: 0
   - name: Interactable
