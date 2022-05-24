@@ -36204,7 +36204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -236}
+  m_AnchoredPosition: {x: 0, y: -239}
   m_SizeDelta: {x: 660, y: 150}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &505891615
@@ -44136,7 +44136,6 @@ GameObject:
   - component: {fileID: 658012914}
   - component: {fileID: 658012913}
   - component: {fileID: 658012915}
-  - component: {fileID: 658012916}
   m_Layer: 7
   m_Name: NPC_Bandit
   m_TagString: Untagged
@@ -44237,18 +44236,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.11086929, y: 0.11037217}
   m_EdgeRadius: 0
---- !u!114 &658012916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658012912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 165a9e0093c1e1b41b9910753ef9dc88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &659177281
 GameObject:
   m_ObjectHideFlags: 0
@@ -44765,7 +44752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &666296052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78056,7 +78043,6 @@ GameObject:
   - component: {fileID: 1912809310}
   - component: {fileID: 1912809309}
   - component: {fileID: 1912809308}
-  - component: {fileID: 1912809307}
   m_Layer: 7
   m_Name: NPC_Blonde
   m_TagString: Untagged
@@ -78064,18 +78050,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1912809307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912809306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 165a9e0093c1e1b41b9910753ef9dc88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1912809308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -109911,7 +109885,6 @@ GameObject:
   - component: {fileID: 2104221692}
   - component: {fileID: 2104221691}
   - component: {fileID: 2104221690}
-  - component: {fileID: 2104221689}
   m_Layer: 7
   m_Name: NPC_Hat
   m_TagString: Untagged
@@ -109919,18 +109892,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2104221689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104221688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 165a9e0093c1e1b41b9910753ef9dc88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2104221690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -111030,6 +110991,10 @@ PrefabInstance:
     - target: {fileID: 1677925567262868560, guid: 5a01792ce7b8c64428970157bc11f8ed, type: 3}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677925567262868560, guid: 5a01792ce7b8c64428970157bc11f8ed, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1677925567262868560, guid: 5a01792ce7b8c64428970157bc11f8ed, type: 3}
       propertyPath: m_LocalPosition.x
