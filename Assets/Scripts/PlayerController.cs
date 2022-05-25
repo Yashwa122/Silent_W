@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
     public SwordAttack swordAttack;
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public HealthBar healthBar;
 
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
@@ -23,11 +27,20 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     private void FixedUpdate() 
     {
-        if(canMove) 
+        //health
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(20);
+        }
+        //health
+
+        if (canMove) 
         {
             if(movementInput != Vector2.zero)
             {
@@ -128,5 +141,11 @@ public class PlayerController : MonoBehaviour
     {
         canMove = true;
     }
-    
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
+    }
 }
