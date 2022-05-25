@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public Transform Player;
+    public float moveSpeed = 0.5f;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+
     Animator animator;
 
     public float Health
@@ -27,6 +32,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        rb = this.GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
@@ -35,6 +41,23 @@ public class Enemy : MonoBehaviour
         animator.SetTrigger("Defeated");
     }
 
+    private void Update()
+    {
+        Vector3 direction = Player.position - transform.position;
+        direction.Normalize();
+        movement = direction;
+    }
+
+    private void FixedUpdate()
+    {
+        moveCharacter(movement);
+        animator.SetTrigger("Move");
+    }
+
+    void moveCharacter(Vector2 direction)
+    {
+        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    }
     public void RemoveEnemy()
     {
         Destroy(gameObject);

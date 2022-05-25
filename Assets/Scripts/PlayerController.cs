@@ -31,14 +31,13 @@ public class PlayerController : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
+    [System.Obsolete]
     private void FixedUpdate() 
     {
-        //health
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (maxHealth <= 0)
         {
-            TakeDamage(20);
+            Application.LoadLevel(Application.loadedLevel);
         }
-        //health
 
         if (canMove) 
         {
@@ -71,6 +70,19 @@ public class PlayerController : MonoBehaviour
             else if (movementInput.x > 0) 
             {
                 spriteRenderer.flipX = false;
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy")
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
+
+            if (enemy != null)
+            {
+                TakeDamage(2);
             }
         }
     }

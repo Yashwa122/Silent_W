@@ -94,14 +94,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3842435027624452121}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -117,11 +117,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008678347, y: 0.004686922}
-  m_Size: {x: 0.18865895, y: 0.18865895}
+  m_Offset: {x: 0.00064736605, y: -0.0007510334}
+  m_Size: {x: 0.21307531, y: 0.21307531}
   m_Direction: 0
 --- !u!114 &1068211215921482904
 MonoBehaviour:
@@ -135,7 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a76cd6242c1474a9e872f44e1ff35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  Player: {fileID: 0}
+  moveSpeed: 0.1
+  health: 9
 --- !u!95 &5569205107168331154
 Animator:
   serializedVersion: 3
