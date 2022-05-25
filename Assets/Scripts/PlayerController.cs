@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// Takes and handles input and movement for a player character
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 1f;
@@ -19,7 +18,6 @@ public class PlayerController : MonoBehaviour
 
     bool canMove = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,7 +29,6 @@ public class PlayerController : MonoBehaviour
     {
         if(canMove) 
         {
-            // If movement input is not 0, try to move
             if(movementInput != Vector2.zero)
             {
                
@@ -54,7 +51,6 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("isMoving", false);
             }
 
-            // Set direction of sprite to movement direction
             if(movementInput.x < 0) 
             {
                 spriteRenderer.flipX = true;
@@ -70,12 +66,11 @@ public class PlayerController : MonoBehaviour
     {
         if(direction != Vector2.zero) 
         {
-            // Check for potential collisions
             int count = rb.Cast(
-                direction, // X and Y values between -1 and 1 that represent the direction from the body to look for collisions
-                movementFilter, // The settings that determine where a collision can occur on such as layers to collide with
-                castCollisions, // List of collisions to store the found collisions into after the Cast is finished
-                moveSpeed * Time.fixedDeltaTime + collisionOffset); // The amount to cast equal to the movement plus an offset
+                direction,
+                movementFilter,
+                castCollisions,
+                moveSpeed * Time.fixedDeltaTime + collisionOffset);
 
             if(count == 0)
             {
@@ -89,7 +84,6 @@ public class PlayerController : MonoBehaviour
         } 
         else 
         {
-            // Can't move if there's no direction to move in
             return false;
         }
        
@@ -99,12 +93,12 @@ public class PlayerController : MonoBehaviour
     {
         movementInput = movementValue.Get<Vector2>();
     }
-    /*
+    
     void OnFire() 
     {
         animator.SetTrigger("swordAttack");
     }
-
+    /*
     public void SwordAttack() 
     {
         LockMovement();
@@ -124,7 +118,7 @@ public class PlayerController : MonoBehaviour
         UnlockMovement();
         swordAttack.StopAttack();
     }
-
+    */
     public void LockMovement() 
     {
         canMove = false;
@@ -134,5 +128,5 @@ public class PlayerController : MonoBehaviour
     {
         canMove = true;
     }
-    */
+    
 }
