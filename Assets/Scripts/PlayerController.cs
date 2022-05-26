@@ -82,7 +82,27 @@ public class PlayerController : MonoBehaviour
 
             if (enemy != null)
             {
-                TakeDamage(2);
+                TakeDamage(4);
+            }
+        }
+
+        if (other.tag == "Boss")
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
+
+            if (enemy != null)
+            {
+                TakeDamage(10);
+            }
+        }
+
+        if (other.tag == "Slime")
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
+
+            if (enemy != null)
+            {
+                TakeDamage(1);
             }
         }
     }
