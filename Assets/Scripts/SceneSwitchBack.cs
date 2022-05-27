@@ -7,6 +7,6 @@ public class SceneSwitchBack : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Main");
     }
 }
