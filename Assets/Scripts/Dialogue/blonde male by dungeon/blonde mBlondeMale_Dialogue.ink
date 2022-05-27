@@ -1,4 +1,4 @@
-﻿Hey im the Dungeon keeper. Do you need an-
+Hey im the Dungeon keeper. Do you need an-
 Oh another Rumin huh... a rare sight around these parts.
 What of it you say? 
 Well you dont really see your kind around here.

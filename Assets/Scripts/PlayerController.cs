@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
             if (enemy != null)
             {
-                TakeDamage(4);
+                TakeDamage(2);
             }
         }
 
