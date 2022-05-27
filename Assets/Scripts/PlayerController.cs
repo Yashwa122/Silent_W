@@ -105,6 +105,13 @@ public class PlayerController : MonoBehaviour
                 TakeDamage(1);
             }
         }
+
+        if (other.transform.tag == "Calabash")
+        {
+            healthBar.SetHealth(maxHealth);
+
+            Destroy(other.gameObject);
+        }
     }
 
     private bool TryMove(Vector2 direction) 
